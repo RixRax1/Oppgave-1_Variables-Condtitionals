@@ -29,13 +29,13 @@ const når du definerer variablene.
 const yourName = "Eivind";
 const yourLastName = "Riska";
 const yourFullName = yourName + " " + yourLastName;
-let youAge = 42;
+let yourAge = 42;
 let isStudent = true;
 let iLoveFood = ["Taco", "Pizza", "Sushi"];
 
 console.log(yourName);
 console.log(yourFullName);
-console.log(youAge);
+console.log(yourAge);
 console.log(isStudent);
 console.log(iLoveFood);
 
@@ -101,12 +101,13 @@ let userIsBlocked = false;
 let goToPage = "";
 
 // Skriv koden for oppgave 4 her
-if (userName !== "" && userAge >= 18 && userIsBlocked == false) {
+
+if (userName && userAge >= 18 && !userIsBlocked) {
   userIsLoggedIn = true;
   goToPage = "/home";
-  console.log("Welcome");
+  console.log("Welcome to you page");
 } else {
-  console.log("Something went wrong");
+  console.log("Something went wrong!");
 }
 
 /******************************************************************************
@@ -124,6 +125,10 @@ Prøv å endre userMale til både true og false og bruk console.log for å sjekk
 at betingelsen din fungerer som den skal.
 ******************************************************************************/
 
-const userMale = false;
+const userMale = true;
 
 // Skriv koden for oppgave 5 her
+
+let userTitle = userMale ? "Mr." : "Mrs.";
+
+console.log(userTitle);
